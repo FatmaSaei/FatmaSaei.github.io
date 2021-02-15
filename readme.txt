@@ -1,5 +1,5 @@
 ==================================================================================================
-I will build my portfoliolove
+I will build my lovely portfolio
 
 DESCRIPTION:
 
