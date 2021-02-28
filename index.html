@@ -45,7 +45,8 @@ layout: default
         {% for item in site.data.social_media %}
         <li>
             <a target="_blank" href="{{ item.account_link }}">
-                <i class="im im-{{ item.app_name }}" aria-hidden="true"></i><span>{{ item.app_name | capitalize }}</span></a>
+                <i class="im im-{{ item.app_name }}" aria-hidden="true"></i>
+                <span>{{ item.app_name | capitalize}}</span></a>
         </li>
         {% endfor %}
     </ul>
@@ -100,38 +101,14 @@ layout: default
             <h3>I've Got Some skills.</h3>
 
             <ul class="skill-bars">
+                {% for item in site.data.skills %}
                 <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>Adobe CS Mastery</strong>
+                    <div class="progress percent{{ item.percentage }}">
+                        <span>{{ item.percentage }}%</span>
+                    </div>
+                    <strong>{{ item.skill_name }}</strong>
                 </li>
-                <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>Computer skills & Microsoft</strong>
-                </li>
-                <li>
-                    <div class="progress percent85"><span>85%</span></div>
-                    <strong>Logo design</strong>
-                </li>
-                <li>
-                    <div class="progress percent75"><span>75%</span></div>
-                    <strong>Web developmet</strong>
-                </li>
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong>Teaching</strong>
-                </li>
-                <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong>creativity & problem solving</strong>
-                </li>
-                <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>Work ethic</strong>
-                </li>
-                <li>
-                    <div class="progress percent85"><span>85%</span></div>
-                    <strong>communication skills</strong>
-                </li>
+                {% endfor %}
             </ul>
         </div>
 
@@ -159,88 +136,45 @@ layout: default
         <div class="col-six tab-full left">
             <div class="timeline">
 
+                {% for item in site.data.experience.left_roles %}
                 <div class="timeline__block">
                     <div class="timeline__bullet"></div>
                     <div class="timeline__header">
-                        <p class="timeline__timeframe">2019 - Present</p>
-                        <h3>Co-Teacher</h3>
-                        <h5>in Al-Ruya Bilingual School <br>
-                            Kuwait</h5>
+                        <p class="timeline__timeframe">{{ item.date }}</p>
+                        <h3>{{ item.title }}</h3>
+                        <h5>in {{ item.employer }} <br>
+                            {{ item.location }}</h5>
                     </div>
                     <div class="timeline__desc">
                         <p>
-                            I worked as a homeroom assistant teacher for primary level.
-                            This position improved my career and provided me with great
-                            experience on how to control the class and deal with young children.
+                            {{ item.description }}
                         </p>
+
                     </div>
                 </div> <!-- end timeline__block -->
-
-                <div class="timeline__block">
-                    <div class="timeline__bullet"></div>
-                    <div class="timeline__header">
-                        <p class="timeline__timeframe">2011 - 2020</p>
-                        <h3>Super Roles</h3>
-                        <h5>in Happiness club (sa3ada club)
-                            <br> Kuwait
-                        </h5>
-                    </div>
-                    <div class="timeline__desc">
-                        <p>
-                            I took lots of roles in this club,
-                            starting from being coordinator, co-teacher and lastly being a Teacher.
-                            I supervised several trips and activities, I assisted the teachers,
-                            and at the end I became a teacher there.
-                        </p>
-                    </div>
-                </div> <!-- end timeline__block -->
-
+                {% endfor %}
             </div> <!-- end timeline -->
         </div> <!-- end left -->
 
         <div class="col-six tab-full right">
             <div class="timeline">
-
+                {% for item in site.data.experience.right_roles %}
                 <div class="timeline__block">
                     <div class="timeline__bullet"></div>
                     <div class="timeline__header">
-                        <p class="timeline__timeframe">2018 - 2019</p>
-                        <h3>Subject Teacher</h3>
-                        <h5>in Green Valley International School <br>
-                            Egypt</h5>
+                        <p class="timeline__timeframe">{{ item.date }}</p>
+                        <h3>{{ item.title }}</h3>
+                        <h5>in {{ item.employer }} <br>
+                            {{ item.location }}</h5>
                     </div>
                     <div class="timeline__desc">
                         <p>
-                            I worked as Activity Teacher. I taught Aerobics for
-                            primary grades. I was transferred upon my choice to be
-                            an Art teacher for KG. I chose this position because
-                            I wanted to gain more experience with kids,
-                            comprising the curriculum and grading the students.
+                            {{ item.description }}
                         </p>
 
                     </div>
                 </div> <!-- end timeline__block -->
-
-                <div class="timeline__block">
-                    <div class="timeline__bullet"></div>
-                    <div class="timeline__header">
-                        <p class="timeline__timeframe">2016 - 2018</p>
-                        <h3>Intern English Teacher</h3>
-                        <h5>
-                            in Fatma Al-Zahra'a high school <br>
-                            & Al-Salam college preparatory school <br>
-                            Egypt
-                        </h5>
-                    </div>
-                    <div class="timeline__desc">
-                        <p>
-                            My supervisors praised my way of teaching and my grades
-                            were Excellent in both training program.
-                            First I thought the preparatory level in 2016 - 2017 year
-                            then the following year I thought high school students.
-                        </p>
-                    </div>
-                </div> <!-- end timeline__block -->
+                {% endfor %}
 
             </div> <!-- end timeline -->
         </div> <!-- end right -->

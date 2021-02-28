@@ -756,7 +756,7 @@ label > input[type="checkbox"], label > input[type="radio"] {
  * ------------------------------------------------------------------- */
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-    -webkit-text-fill-color: #cf3e3e;
+    -webkit-text-fill-color: #df5f0a;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -1131,7 +1131,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .skill-bars li .progress {
     background: #000000;
-    background-image: linear-gradient(to right, #191A3F, #2d462c);
+    background-image: linear-gradient(to right, #000, #b36c25);
     position: relative;
     height: 100%;
 }
@@ -2891,7 +2891,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .cta__content span {
-    color: #191A3F;
+    color: #000;
 }
 
 
