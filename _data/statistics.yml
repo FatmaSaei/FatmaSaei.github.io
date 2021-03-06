@@ -1,0 +1,19 @@
+- title: Artworks
+  number: 50
+  highlighted: True
+  up_arrow: True
+
+- title: Awards Received
+  number: 5
+  highlighted: False
+  up_arrow: False
+
+- title: Powerpoint projects
+  number: 15
+  highlighted: True
+  up_arrow: True
+
+- title: Happy clients
+  number: 120
+  highlighted: False
+  up_arrow: False

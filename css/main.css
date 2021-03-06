@@ -3135,6 +3135,7 @@ html.no-csstransitions .home-content__main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: .9rem;
     color: rgba(255, 255, 255, 0.75);
+    padding-inline: 10px;
 }
 
 .contact__form input[type="email"]:focus, 
@@ -3144,7 +3145,9 @@ html.no-csstransitions .home-content__main {
 .contact__form input[type="url"]:focus, 
 .contact__form textarea:focus {
     color: white;
-    border-bottom: 1px solid white;
+    border: 1px solid white;
+    background-color: #df5f0a;
+    opacity: 0.5;
 }
 
 .contact__form button {
