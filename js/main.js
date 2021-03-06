@@ -339,7 +339,7 @@
     var ssContactForm = function() {
 
         /* local validation */
-	    $('#contactForm').validate({
+	    $('#unused_contactForm').validate({
         
             /* submit via ajax */
             submitHandler: function(form) {
