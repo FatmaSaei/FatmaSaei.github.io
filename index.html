@@ -45,6 +45,7 @@ layout: default
         {% for item in site.data.social_media %}
         <li>
             <a target="_blank" href="{{ item.account_link }}">
+                <link rel="icon" type="image/png" sizes="16x16" href="/images\{{item.image_logo}}">
                 <i class="im im-{{ item.app_name }}" aria-hidden="true"></i>
                 <span>{{ item.app_name | capitalize}}</span></a>
         </li>
