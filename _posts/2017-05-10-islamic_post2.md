@@ -2,7 +2,7 @@
 layout: post
 title:  "َإِنَّ فِي الْجَسَدِ مُضْغَةً"
 date:   2017-05-10 14:30:24 +0300
-categories: Islamic posts
+categories: Islamic post
 excerpt_separator: <!--more-->
 ---
 الإسلام بينقسم لجزئين؛ دين وأخلاق.
