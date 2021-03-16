@@ -2,7 +2,7 @@
 layout: post
 title:  "كم  مقدار قوتك؟"
 date:   2017-05-04 24:15:24 +0300
-categories: Islamic posts
+categories: Islamic post
 excerpt_separator: <!--more-->
 ---
 يعني ايه تكون قوي؟
