@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "أنت حاسد"
-date:   2021-08-29 21:00:24 +0300
+date:   2020-08-29 21:00:24 +0300
 categories: Islamic post
 excerpt_separator: <!--more-->
 ---
