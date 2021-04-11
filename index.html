@@ -45,9 +45,13 @@ layout: default
         {% for item in site.data.social_media %}
         <li>
             <a target="_blank" href="{{ item.account_link }}">
-                <link rel="icon" type="image/png" sizes="16x16" href="/images\{{item.image_logo}}">
-                <i class="im im-{{ item.app_name }}" aria-hidden="true"></i>
-                <span>{{ item.app_name | capitalize}}</span></a>
+                {% if item.image_logo == '0' %}
+                    <i class="im im-{{ item.app_name }}" aria-hidden="true"></i>
+                {% else %}
+                    <img href="image/{{item.image_logo}}"></img>
+                {% endif %}
+                <span>{{ item.app_name | capitalize}}</span>
+            </a>
         </li>
         {% endfor %}
     </ul>
@@ -301,11 +305,11 @@ layout: default
         <div class="col-full">
 
             <div class="blog-list block-1-2 block-tab-full">
-                {% for post in site.posts %}
+                {% for post in site.posts limit:4 %}
                 <article class="col-block">
 
                     <div class="blog-date">
-                        <a href="blog-single.html">{{post.date}}</a>
+                        <a href="blog-single.html">{{post.date | date: "%e %B, %Y %R" }}</a>
                     </div>
 
                     <h2 class="h01"><a href="blog-single.html">{{post.title}}</a></h2>

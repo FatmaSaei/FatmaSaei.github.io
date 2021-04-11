@@ -514,6 +514,12 @@
 .im-facebook-like:before {
   content: '\e0a6';
 }
+.im-sarahah:before {
+  background: url('images/Sarahahlogo.png');
+  height: 16px;
+  width: 16px;
+  display: block;
+}
 .im-twitter:before {
   content: '\e0a7';
 }
