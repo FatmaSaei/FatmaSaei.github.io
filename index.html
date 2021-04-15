@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Fatma Saei
 ---
 
 <!-- home
@@ -48,7 +49,7 @@ layout: default
                 {% if item.image_logo == '0' %}
                     <i class="im im-{{ item.app_name }}" aria-hidden="true"></i>
                 {% else %}
-                    <img href="image/{{item.image_logo}}"></img>
+                    <img style="width: 16px;" src="images/{{item.image_logo}}"></img>
                 {% endif %}
                 <span>{{ item.app_name | capitalize}}</span>
             </a>
@@ -207,7 +208,7 @@ layout: default
 
     <div class="row masonry-wrap">
         <div class="masonry">
-            {% for pic in site.data.gallery %}
+            {% for pic in site.data.gallery limit:5 %}
             <div class="masonry__brick">
                 <div class="item-folio">
 
@@ -227,7 +228,7 @@ layout: default
                         <p class="item-folio__cat">
                             {% assign list_tags = pic.tags | split: "-" %}
                             {% for tag in list_tags %}
-                                <span>{{ tag }}</span>
+                                <span>{{ tag  | replace: "_", " " }}</span>
                             {% endfor %} 
                         </p>
                     </div>
@@ -246,8 +247,10 @@ layout: default
             </div> <!-- end masonry__brick -->
             {% endfor %}
         </div>
+        <p>
+            <a style="margin-top: 100px;" class="btn btn--stroke full-width" href="gallery.html">See more 🡲</a>
+        </p>
     </div> <!-- end masonry -->
-
 </section> <!-- end works -->
 
 
@@ -327,6 +330,9 @@ layout: default
                 </article>
                 {% endfor %}
             </div> <!-- end blog-list -->
+            <p>
+                <a class="btn btn--stroke full-width" href="blog.html">See more 🡲</a>
+            </p>
 
         </div> <!-- end col-full -->
     </div> <!-- end blog-content -->
