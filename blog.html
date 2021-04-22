@@ -6,32 +6,33 @@ title: Fatma's Blog
 <!-- page header
     ================================================== -->
 <section  id="home" class="page-header page-hero" style="background-image:url(images/blog/blog-bg-01.jpg)">
-
+    {% for post in site.posts limit:1 %}
     <div class="row page-header__content">
         <article class="col-full">
 
             <div class="page-header__info">
                 <div class="page-header__cat">
-                    <a href="#0">Branding</a><a href="#0">Design</a>
+                    {% for cat in post.categories %}
+                        <a href="#0">{{cat}}</a>
+                    {% endfor %}
                 </div>
                 <div class="page-header__date">
-                    Sept 16, 2017
+                    {{post.date | date: "%e %B, %Y" }}
                 </div>
             </div>
 
             <h1 class="page-header__title">
                 <a href="#0" title="">
-                    The 10 Golden Rules of Clean Simple Design.
+                    {{post.title}}
                 </a>
             </h1>
-            <p>Pellentesque in ipsum id orci porta dapibus amet dui. Ad id deserunt ratione autem eius et minima ut et.
-                Nihil sed quis velit aut enim aliquam. Quas non ad sint eveniet voluptatem est iure...</p>
+                {{ post.excerpt }}
             <p>
-                <a href="#0" class="btn btn--stroke page-header__btn">Read More</a>
+                <a href="{{post.url}}" class="btn btn--stroke page-header__btn">Read More</a>
             </p>
         </article>
     </div>
-
+    {% endfor %}
 </section> <!-- end page-header -->
 
 
@@ -43,118 +44,27 @@ title: Fatma's Blog
         <div class="col-full">
 
             <div class="blog-list block-1-2 block-tab-full">
-
+                {% for post in site.posts offset:1 %}
                 <article class="col-block">
 
                     <div class="blog-date">
-                        <a href="blog-single.html">Sept 15, 2017</a>
+                        <a href="blog-single.html">{{post.date | date_to_string: "ordinal" }}</a>
                     </div>
 
-                    <h2 class="h01"><a href="blog-single.html">Photography Skills Can Improve Your Graphic Design.</a>
+                    <h2 class="h01">
+                        <a href="{{post.url}}">
+                        {{post.title}}
+                        </a>
                     </h2>
-                    <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id
-                        orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget
-                        consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed
-                        porttitor lectus nibh..
-                    </p>
-
+                    {{ post.excerpt }}
                     <div class="blog-cat">
-                        <a href="blog.html">Photography</a>
+                        {% for cat in post.categories %}
+                        <a href="blog.html">{{cat}}</a>
+                        {% endfor %}
                     </div>
 
                 </article>
-
-                <article class="col-block">
-
-                    <div class="blog-date">
-                        <a href="blog-single.html">Sept 14, 2017</a>
-                    </div>
-
-                    <h2 class="h01"><a href="blog-single.html">Workspace Design Trends and Ideas.</a></h2>
-                    <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id
-                        orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget
-                        consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed
-                        porttitor lectus nibh dolore irure esse Duis nulla sint.
-                    </p>
-
-                    <div class="blog-cat">
-                        <a href="blog.html">Branding</a><a href="blog.html">Wordpress</a>
-                    </div>
-                </article>
-
-                <article class="col-block">
-
-                    <div class="blog-date">
-                        <a href="blog-single.html">Sept 12, 2017</a>
-                    </div>
-                    <h2 class="h01"><a href="blog-single.html">You Can See Patterns Everywhere.</a></h2>
-                    <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id
-                        orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget
-                        consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed
-                        porttitor lectus nibh.
-                    </p>
-
-                    <div class="blog-cat">
-                        <a href="blog.html">Design</a><a href="blog.html">UI</a>
-                    </div>
-                </article>
-
-                <article class="col-block">
-
-                    <div class="blog-date">
-                        <a href="blog-single.html">Sept 12, 2017</a>
-                    </div>
-                    <h2 class="h01"><a href="blog-single.html">Designing With Black and White.</a></h2>
-                    <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id
-                        orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget
-                        consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed
-                        porttitor lectus nibh.
-                    </p>
-
-                    <div class="blog-cat">
-                        <a href="blog.html">Design</a>
-                    </div>
-                </article>
-
-                <article class="col-block">
-                    <div class="blog-date">
-                        <a href="blog-single.html">Sept 10, 2017</a>
-                    </div>
-                    <h2 class="h01"><a href="blog-single.html">Get Started With Web Typography .</a></h2>
-                    <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id
-                        orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget
-                        consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed
-                        porttitor lectus nibh.
-                    </p>
-
-                    <div class="blog-cat">
-                        <a href="blog.html">Typography</a>
-                    </div>
-                </article>
-
-                <article class="col-block">
-
-                    <div class="blog-date">
-                        <a href="blog-single.html">Sept 08, 2017</a>
-                    </div>
-                    <h2 class="h01"><a href="blog-single.html">Improving Design Layout With Vertical Rhythm.</a></h2>
-                    <p>
-                        Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id
-                        orci porta dapibus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget
-                        consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Sed
-                        porttitor lectus nibh.
-                    </p>
-
-                    <div class="blog-cat">
-                        <a href="blog.html">Design</a><a href="#0">Web Design</a>
-                    </div>
-                </article>
-
+                {% endfor %}
             </div> <!-- end blog-list -->
 
         </div> <!-- end col-full -->
