@@ -1334,6 +1334,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ## blog-list - (_common-styles.scss)
  * ------------------------------------------------------------------- */
 
+.rtl_support {
+    direction:rtl;
+    text-align: right
+}
+
 .blog-list {
     margin-top: 6rem;
     margin-left: 0;
