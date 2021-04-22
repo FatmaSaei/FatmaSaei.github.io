@@ -5,7 +5,7 @@
         <div class="col-full">
 
             <div class="footer-logo">
-                <a class="footer-site-logo" href="index.html"><img src="images/white fox logo.png" alt="Homepage"></a>
+                <a class="footer-site-logo" href="{{baseurl}}/index.html"><img src="{{'images/white fox logo.png' | relative_url}}" alt="Homepage"></a>
             </div>
 
             <ul class="footer-social">
@@ -14,7 +14,7 @@
                         {% if item.image_logo == '0' %}
                             <i class="im im-{{ item.app_name }}" aria-hidden="true"></i>
                         {% else %}
-                            <img style="width: 20px;" src="images/{{item.image_logo}}"></img>
+                            <img style="width: 20px;" src="{{baseurl}}/images/{{item.image_logo}}"></img>
                         {% endif %}
                         <span>{{ item.app_name | capitalize}}</span>
                     </a>
